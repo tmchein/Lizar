@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "lizar";
 
 export default function Docs() {
   return (
