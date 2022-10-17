@@ -1,7 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Button, HighlightedArea } from "lizar";
+import { Button, HighlightedArea, NavBar } from "lizar";
+
+const tabsData = [
+  {
+    label: "Docs",
+    value: "docs",
+  },
+  {
+    label: "GitHub",
+    value: "github",
+  },
+];
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +23,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full flex flex-col items-center gap-8 ">
+        <NavBar options={tabsData} highLightColor="#fe23e3" />
         <h1
           className="text-9xl font-extrabold text-transparent bg-clip-text
           bg-gradient-to-r from-lizar-lemon-green to-lizar-hard-green"
         >
           Lizar
         </h1>
-        <h2 className="text-white">
-          A Tiny, fast, and easy to use Tailwind components library for React
+        <h2 className="text-white/60">
+          Creating landing pages was never this easy
         </h2>
         <Button text="Boop beep!" />
         <HighlightedArea title="Lizar Release 0.0.1" subtitle="See whats new" />
